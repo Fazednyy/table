@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 0, .5);
+    margin: 0;
+    color: white;
+}
+
+table {
+    background-color: rgba(0, 0, 0, .5);
+    margin: 0;
+}
+
+td {
+    background-color: rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border-radius: 50%;
+}
+
+table {
+    text-align: center;
+}
+
+.text-box {
+    margin-left: 44vw;
+    margin-top: 42vh;
+}
+
+a:link,
+a:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+a:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    background-color: #fff;
+    color: #777;
+}
+
+a::after {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+a:after {
+    background-color: #fff;
+}
+
+a:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+a {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+
+.delete {
+    color: #777;
+    min-width: 120px;
+    min-height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    background: #fff;
+    background: linear-gradient(90deg, #fff);
+    border: none;
+    border-radius: 1000px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+
+.delet:hover,
+.delet:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+.delet:hover::before,
+.delet:focus::before {
+    opacity: 1;
+}
+
+.delet::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #fff;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+.delete:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* New User */
+
+.war {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  .newUser {
+      margin: 10px 0;
+    min-width: 200px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+  background: linear-gradient(90deg, #fff 0%, #fff 100%);
+    border: none;
+    border-radius: 100px;
+    box-shadow: 12px 12px 24px rgb(113, 113, 113);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  #button::before {
+  content: '';
+    border-radius: 100px;
+    min-width: calc(190px + 10px);
+    min-height: calc(37px + 12px);
+    border: 6px solid #3e3e3e;
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .newUser:hover, .newUser:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  #button:hover::before, #button:focus::before {
+    opacity: 1;
+  }
+  
+  #button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid rgba(0, 0, 0, .5);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  #button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 200px;
+      height: 200px;
+      opacity: 0;
+    }
+  }
